@@ -66,7 +66,7 @@ container.innerHTML+=`
 
 <h4>${product.price}</h4>
 
-<a href="https://wa.me/62XXXXXXXXXXX?text=Saya ingin membeli ${encodeURIComponent(product.name)}" target="_blank">
+<a href="https://wa.me/6285260100455?text=Saya ingin membeli ${encodeURIComponent(product.name)}" target="_blank">
 
 <button>Pesan via WhatsApp</button>
 
