@@ -310,25 +310,16 @@ height:220px;
     background:#1db954;
 }
 header{
+    height:100vh;
     background:
-        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-        url("image.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("images/header.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
 }
-header h1{
-    font-size:48px;
-    margin-bottom:10px;
-    letter-spacing:3px;
-    font-weight:700;
-}
-
-header p{
-    font-size:20px;
-    opacity:.9;
