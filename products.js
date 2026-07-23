@@ -1,0 +1,1 @@
+const products=[{name:"Kaca Tempered",code:"KT001",price:"Rp450.000"},{name:"Cermin Bevel",code:"CB002",price:"Rp350.000"},{name:"Kaca Laminated",code:"KL003",price:"Rp650.000"}];
