@@ -1,1 +1,39 @@
-function render(){let q=document.getElementById("q").value.toLowerCase();let d=document.getElementById("products");d.innerHTML="";products.filter(p=>p.name.toLowerCase().includes(q)||p.code.toLowerCase().includes(q)).forEach(p=>d.innerHTML+=`<div class="card"><div class="img">Gambar Produk</div><h3>${p.name}</h3><p>${p.code}</p><b>${p.price}</b><br><a class="btn" target="_blank" href="https://wa.me/6200000000000?text=Halo%20RIZKI%20KACA,%20saya%20ingin%20memesan%20${encodeURIComponent(p.name)}">Pesan WhatsApp</a></div>`)}render();
+function render() {
+    const keyword = document.getElementById("q").value.toLowerCase();
+    const container = document.getElementById("products");
+
+    container.innerHTML = "";
+
+    const hasil = products.filter(product =>
+        product.name.toLowerCase().includes(keyword)
+    );
+
+    hasil.forEach(product => {
+
+        container.innerHTML += `
+
+        <div class="card">
+
+            <img src="${product.image}" alt="${product.name}">
+
+            <h3>${product.name}</h3>
+
+            <p>Kode : ${product.code}</p>
+
+            <h4>${product.price}</h4>
+
+            <a href="https://wa.me/6285260100455?text=Halo%20RIZKI%20KACA,%20saya%20ingin%20bertanya%20tentang%20produk%20${encodeURIComponent(product.name)}" target="_blank">
+
+                <button>Pesan via WhatsApp</button>
+
+            </a>
+
+        </div>
+
+        `;
+
+    });
+
+}
+
+render();
