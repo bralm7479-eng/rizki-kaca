@@ -323,3 +323,28 @@ header{
     text-align:center;
     color:white;
 }
+/* ===== KATEGORI ===== */
+
+.kategori{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-bottom:40px;
+}
+
+.kategori button{
+    padding:12px 25px;
+    border:none;
+    background:#e5e7eb;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.kategori button:hover{
+    background:#00c853;
+    color:white;
+    transform:translateY(-3px);
+}
