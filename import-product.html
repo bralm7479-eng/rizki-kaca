@@ -16,28 +16,24 @@ const supabase = createClient(
     "https://skzujzzzbbezclwzafoh.supabase.co",
     "sb_publishable_TBcfRBo7Yl8OPkJvw4q_Xg_lvRLIGCy"
 );
+document.getElementById("importBtn").onclick = async () => {
 
+  console.log("Jumlah produk:", products.length);
 
-document.getElementById("importBtn")
-.onclick = async()=>{
-
-
-    const { data, error } = await supabase
+  const { data, error } = await supabase
     .from("products")
     .insert(products);
 
+  console.log("DATA:", data);
+  console.log("ERROR:", error);
 
-    if(error){
+  if(error){
+    alert(error.message);
+  } else {
+    alert("Berhasil import " + products.length + " produk");
+  }
 
-        alert("Gagal upload: " + error.message);
+};
 
-    }else{
-
-        alert("Berhasil import " + products.length + " produk!");
-
-    }
-
-
-}
 
 </script>
