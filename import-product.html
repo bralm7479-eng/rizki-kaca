@@ -1,0 +1,43 @@
+<button id="importBtn">Import Semua Produk</button>
+
+<script type="module">
+
+import { createClient } from 
+"https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
+
+import { products } from "./products.js";
+
+
+const supabaseUrl = "MASUKKAN_URL_SUPABASE";
+const supabaseKey = "MASUKKAN_ANON_KEY";
+
+
+const supabase = createClient(
+    supabaseUrl,
+    supabaseKey
+);
+
+
+document.getElementById("importBtn")
+.onclick = async()=>{
+
+
+    const { data, error } = await supabase
+    .from("products")
+    .insert(products);
+
+
+    if(error){
+
+        alert("Gagal upload: " + error.message);
+
+    }else{
+
+        alert("Berhasil import " + products.length + " produk!");
+
+    }
+
+
+}
+
+</script>
