@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin RIZKI KACA</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>ADMIN RIZKI KACA</h1>
+
+    <div class="form">
+
+        <input type="text" id="name" placeholder="Nama Produk">
+
+        <input type="text" id="code" placeholder="Kode Produk">
+
+        <input type="text" id="category" placeholder="Kategori">
+
+        <input type="text" id="price" placeholder="Harga">
+
+        <input type="text" id="image" placeholder="URL Gambar">
+
+        <button onclick="addProduct()">
+            Tambah Produk
+        </button>
+
+    </div>
+
+    <hr>
+
+    <table>
+
+        <thead>
+
+        <tr>
+
+            <th>Nama</th>
+            <th>Kode</th>
+            <th>Kategori</th>
+            <th>Harga</th>
+            <th>Aksi</th>
+
+        </tr>
+
+        </thead>
+
+        <tbody id="productTable">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script src="admin.js"></script>
+
+</body>
+</html>
