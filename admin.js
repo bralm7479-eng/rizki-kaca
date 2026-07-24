@@ -18,27 +18,16 @@ async function loadProducts() {
 
         table.innerHTML += `
         <tr>
-
             <td>${product.name}</td>
-
             <td>${product.code}</td>
-
             <td>${product.category}</td>
-
             <td>${product.price}</td>
-
             <td>
-
-                <button
-                class="action-btn delete"
+                <button class="action-btn delete"
                 onclick="deleteProduct(${product.id})">
-
                 Hapus
-
                 </button>
-
             </td>
-
         </tr>
         `;
 
@@ -46,7 +35,6 @@ async function loadProducts() {
 
 }
 
-loadProducts();
 async function addProduct() {
 
     const name = document.getElementById("name").value;
@@ -74,7 +62,7 @@ async function addProduct() {
 
     if (error) {
         console.error(error);
-        alert("Gagal menambah produk!");
+        alert(error.message);
         return;
     }
 
@@ -87,6 +75,7 @@ async function addProduct() {
     document.getElementById("image").value = "";
 
     loadProducts();
+
 }
 
 async function deleteProduct(id) {
@@ -100,9 +89,12 @@ async function deleteProduct(id) {
 
     if (error) {
         console.error(error);
-        alert("Gagal menghapus produk!");
+        alert(error.message);
         return;
     }
 
     loadProducts();
+
 }
+
+loadProducts();
